@@ -31,9 +31,100 @@ function createCard(pkmn) {
   );
   let typeTag = document.getElementById("typeTag-" + pkmn.id);
   pkmn.type.forEach((e) => {
+        switch (e) {
+      case "Fire":
+        bgType = "bg-red-600";
+        textColor = "text-white";
+        break;
+
+      case "Grass":
+        bgType = "bg-green-600";
+        textColor = "text-white";
+        break;
+
+      case "Poison":
+        bgType = "bg-violet-400";
+        textColor = "text-white";
+        break;
+
+      case "Flying":
+        bgType = "bg-sky-400";
+        textColor = "text-white";
+        break;
+
+      case "Water":
+        bgType = "bg-blue-600";
+        textColor = "text-white";
+        break;
+
+      case "Bug":
+        bgType = "bg-green-400";
+        textColor = "text-white";
+        break;
+
+      case "Electric":
+        bgType = "bg-yellow-400";
+        textColor = "text-black";
+        break;
+
+      case "Ground":
+        bgType = "bg-orange-900";
+        textColor = "text-white";
+        break;
+
+      case "Fairy":
+        bgType = "bg-rose-300";
+        textColor = "text-white";
+        break;
+
+      case "Fighting":
+        bgType = "bg-gray-600";
+        textColor = "text-white";
+        break;
+
+      case "Ice":
+        bgType = "bg-cyan-400";
+        textColor = "text-white";
+        break;
+
+      case "Rock":
+        bgType = "bg-stone-600";
+        textColor = "text-white";
+        break;
+
+      case "Psychic":
+        bgType = "bg-zinc-400";
+        textColor = "text-white";
+        break;
+
+      case "Dark":
+        bgType = "bg-black";
+        textColor = "text-white";
+        break;
+
+      case "Ghost":
+        bgType = "bg-gray-800";
+        textColor = "text-white";
+        break;
+
+      case "Steel":
+        bgType = "bg-gray-500";
+        textColor = "text-white";
+        break;
+
+      case "Dragon":
+        bgType = "bg-red-600";
+        textColor = "text-white";
+        break;
+
+      default:
+        bgType = "bg-gray-200";
+        textColor = "text-gray-700";
+        break;
+    }
     typeTag.insertAdjacentHTML(
       "beforeend",
-      `<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">${e}</span>`
+      `<span class="inline-block ${bgType} rounded-full px-3 py-1 text-sm font-semibold ${textColor} mr-2 mb-2">${e}</span>`
     );
   });
 }
