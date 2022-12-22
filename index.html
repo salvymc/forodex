@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <div
+      class="grid justify-items-center p-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2"
+      id="menu"
+    >
+      <img class="hover:animate-pulse" src="logo.png" />
+      <div
+        id="searchBox"
+        class="flex justify-center self-center margin-color mt-2 mb-2"
+      >
+        <input
+          type="text"
+          class="w-[300px] p-3 outline-0 border-2 border-red-700 hover:border-red-700 rounded h-10"
+          placeholder="cerca..."
+          id="search_bar"
+        />
+        <select
+          class="p-1 outline-0 border-2 border-red-700 hover:border-red-700 rounded h-10"
+          id="select_gen"
+        >
+          <option value="1">1° GEN</option>
+          <option value="2">2° GEN</option>
+          <option value="3">3° GEN</option>
+          <option value="4">4° GEN</option>
+          <option value="5">5° GEN</option>
+          <option value="6">6° GEN</option>
+          <option value="7">7° GEN</option>
+          <option value="8">8° GEN</option>
+          <option value="All">ALL GEN</option>
+        </select>
+      </div>
+    </div>
+    <div
+      id="pokedex"
+      class="grid justify-items-center p-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-2"
+    ></div>
+
+    <div
+      class="grid justify-items-center grid-cols-1 md:grid-cols-3"
+      id="footer"
+    >
+      <p class="self-end font-bold">FORODEX 2022</p>
+      <img class="self-end" src="404.webp" />
+      <p class="self-end text-[10px] text-center">
+        Pokémon and Pokémon character names are trademarks of Nintendo.
+      </p>
+
+      <p></p>
+    </div>
+    <!-- Main modal -->
+    <div
+      id="defaultModal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+    >
+      <div class="relative w-full h-full max-w-2xl md:h-auto">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+          >
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              ZOOOM
+            </h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-toggle="defaultModal"
+              id="close_modal"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-6 space-y-6">
+            <img class="w-full" src="" id="img_modal" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
