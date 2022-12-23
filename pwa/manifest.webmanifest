@@ -3,7 +3,7 @@
     "background_color": "#ffffff",
     "display": "standalone",
     "scope": "/",
-    id: "/forodex/",
+    "id": "/forodex/",
     "start_url": "https://salvymc.github.io/forodex/",
     "name": "Forodex",
     "short_name": "Forodex",
