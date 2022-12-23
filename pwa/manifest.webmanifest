@@ -1,0 +1,32 @@
+{
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "display": "browser",
+    "scope": "/",
+    "start_url": "https://salvymc.github.io/forodex/",
+    "name": "Forodex",
+    "short_name": "Forodex",
+    "description": "An unofficial Pok\u00e9dex dashboard webapp created using Html, Javascript and Tailwindcss displaying information of over 800 different Pok\u00e9mon.",
+    "icons": [
+        {
+            "src": "icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
